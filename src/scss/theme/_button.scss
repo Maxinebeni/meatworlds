@@ -1,0 +1,37 @@
+.btn-glow {
+  position: relative;
+  background-color: #f85444; // Set the button's base color
+  color: white; // Ensure the text is visible
+  border: none; // Optional: remove borders for a cleaner look
+
+  &::before {
+    content: '';
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: inline-block;
+    background-color: #f85444; // Match the glow to the button color
+    opacity: 0.55;
+    filter: blur(26px);
+    transform: translateY(45%);
+    z-index: -1;
+    border-radius: 10px;
+  }
+}
+
+// Gradient Button Hover Effect
+.btn-gradient:hover {
+  box-shadow: 0 10px 20px #f85444, 0 6px 6px #f85444; // Use the desired color
+}
+
+// General Button Style
+.btn {
+  color: white; // Text color
+  background-color: #f85444; // Base color for the button
+  border-radius: 5px; // Optional: rounded corners
+  padding: 10px 20px; // Optional: adjust padding
+  font-weight: bold; // Optional: make the text bold
+}
+
